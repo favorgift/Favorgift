@@ -719,3 +719,27 @@ nav img{
 .back-btn:hover{
     background:#5a4939;
 }
+.cart-item{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:20px !important;
+}
+
+.cart-image{
+    width:120px !important;
+    height:120px !important;
+    object-fit:cover !important;
+    margin-bottom:0 !important;
+}
+
+.cart-info{
+    flex:1 !important;
+}
+
+.cart-action{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    gap:10px !important;
+}
