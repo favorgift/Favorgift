@@ -704,3 +704,18 @@ nav img{
     border-radius:8px;
     cursor:pointer;
 }
+/*butang kembali semak status*/
+
+.back-btn{
+    background:#6d5a47;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.back-btn:hover{
+    background:#5a4939;
+}
