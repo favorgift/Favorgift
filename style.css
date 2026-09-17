@@ -628,3 +628,25 @@ nav img{
     border-radius:10px;
     margin-bottom:10px;
 }
+
+/*sesifikasi produk*/
+.product-spec{
+    text-align: left;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #555;
+}
+
+.product-spec h4{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.product-spec ul{
+    margin: 0;
+    padding-left: 18px;
+}
+
+.product-spec li{
+    margin-bottom: 3px;
+}
