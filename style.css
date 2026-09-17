@@ -651,3 +651,17 @@ nav img{
 .product-spec li{
     margin-bottom: 3px;
 }
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qty-box input{
+    width:60px;
+    text-align:center;
+    padding:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
