@@ -53,13 +53,18 @@ function addToCart(name, price, image, pilihan){
             <p>RM${item.price.toFixed(2)}</p>
 
             <div class="qty-box">
-                <button onclick="decreaseQty(${index})">-</button>
 
-                <span>${item.quantity}</span>
+        <button onclick="decreaseQty(${index})">-</button>
 
-                <button onclick="increaseQty(${index})">+</button>
-            </div>
-
+        <input
+            type="number"
+            min="1"
+            value="${item.quantity}"
+            onchange="updateQty(${index}, this.value)">
+            
+        <button onclick="increaseQty(${index})">+</button>
+        </div
+            
             <p>
                 Subtotal:
                 RM${(item.price * item.quantity).toFixed(2)}
@@ -111,6 +116,22 @@ function decreaseQty(index){
     localStorage.setItem("cart", JSON.stringify(cart));
 
     displayCart();
+}
+
+function updateQty(index, value){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart[index].quantity = parseInt(value) || 1;
+
+    if(cart[index].quantity < 1){
+        cart[index].quantity = 1;
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    displayCart();
+    updateCartCount();
 }
 
 function updateCartCount(){
