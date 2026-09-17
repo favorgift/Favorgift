@@ -173,6 +173,9 @@ footer{
     border-radius:20px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
     min-height:580px;
+
+    display:flex;
+    flex-direction:column;
 }
 
 .product-card img{
@@ -222,11 +225,9 @@ footer{
     transform: translateY(-5px);
     transition: 0.3s;
 }
-/*Button Tambah troli akan berada pada paras yang sama */
-.option-space{
-    height:60px;
-}
+
 /*bila mouse lalu card akan naik sedikit*/
+
 .product-card{
     transition:0.3s;
 }
