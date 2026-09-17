@@ -42,40 +42,48 @@ function addToCart(name, price, image, pilihan){
         total += item.price * item.quantity;
 
         cartItems.innerHTML += `
-        <div class="cart-item">
+<div class="cart-item">
 
-            <img src="${item.image}" class="cart-image">
+    <img src="${item.image}" class="cart-image">
 
-            <h3>${item.name}</h3>
+    <div class="cart-info">
+        <h3>${item.name}</h3>
 
-           <p>Pilihan: ${item.pilihan || "-"}</p>
-           
-            <p>RM${item.price.toFixed(2)}</p>
+        <p>Pilihan: ${item.pilihan || "-"}</p>
 
-            <div class="qty-box">
+        <p>RM${item.price.toFixed(2)}</p>
 
-        <button onclick="decreaseQty(${index})">-</button>
+        <p>
+            Subtotal:
+            RM${(item.price * item.quantity).toFixed(2)}
+        </p>
+    </div>
 
-        <input
-            type="number"
-            min="1"
-            value="${item.quantity}"
-            onchange="updateQty(${index}, this.value)">
-            
-        <button onclick="increaseQty(${index})">+</button>
-        </div
-            
-            <p>
-                Subtotal:
-                RM${(item.price * item.quantity).toFixed(2)}
-            </p>
+    <div class="cart-action">
 
-            <button onclick="removeItem(${index})">
-                Buang
-            </button>
+        <div class="qty-box">
+
+            <button onclick="decreaseQty(${index})">-</button>
+
+            <input
+                type="number"
+                min="1"
+                value="${item.quantity}"
+                onchange="updateQty(${index}, this.value)">
+
+            <button onclick="increaseQty(${index})">+</button>
 
         </div>
-        `;
+
+        <button class="remove-btn"
+            onclick="removeItem(${index})">
+            Buang
+        </button>
+
+    </div>
+
+</div>
+`;
     });
 
     document.getElementById("total").innerHTML =
