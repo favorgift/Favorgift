@@ -15,9 +15,9 @@ function addToCart(name, price, image, pilihan){
         price:price,
         image:image,
         pilihan:pilihan,
-        quantity:1
     });
     }
+        quantity:1
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -193,104 +193,117 @@ function saveStock(){
 
 function loadStock(){
 
-    let stock = JSON.parse(localStorage.getItem("stock"));
+fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec")
 
-    if(!stock) return;
+.then(response => response.json())
 
-    // Wedding
-    if(document.getElementById("stock-sabun"))
-        document.getElementById("stock-sabun").innerText = "Stok: " + stock.sabun;
+.then(stockData => {
 
-    if(document.getElementById("stock-madu"))
-        document.getElementById("stock-madu").innerText = "Stok: " + stock.madu;
+for(let i = 1; i < stockData.length; i++){
 
-    if(document.getElementById("stock-lilin"))
-        document.getElementById("stock-lilin").innerText = "Stok: " + stock.lilin;
+let produk = stockData[i][0];
+let stok = stockData[i][1];
 
-    if(document.getElementById("stock-tuala"))
-        document.getElementById("stock-tuala").innerText = "Stok: " + stock.tuala;
+// Wedding
+if(produk == "Sabun Tangan")
+document.getElementById("stock-sabun").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-coklat"))
-        document.getElementById("stock-coklat").innerText = "Stok: " + stock.coklat;
+if(produk == "madu")
+document.getElementById("stock-madu").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-setcawan"))
-        document.getElementById("stock-setcawan").innerText = "Stok: " + stock.setcawan;
+if(produk == "lilin")
+document.getElementById("stock-lilin").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-kipas"))
-        document.getElementById("stock-kipas").innerText = "Stok: " + stock.kipas;
+if(produk == "tuala")
+document.getElementById("stock-tuala").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-sudu"))
-        document.getElementById("stock-sudu").innerText = "Stok: " + stock.sudu;
+if(produk == "Coklat strawberi")
+document.getElementById("stock-coklat").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-tisu"))
-        document.getElementById("stock-tisu").innerText = "Stok: " + stock.tisu;
+if(produk == "Set Cawan")
+document.getElementById("stock-setcawan").innerText = "Stok: " + stok;
 
-    if(document.getElementById("stock-sejadah"))
-        document.getElementById("stock-sejadah").innerText = "Stok: " + stock.sejadah;
+if(produk == "kipas")
+document.getElementById("stock-kipas").innerText = "Stok: " + stok;
 
-    // Birthday
-if(document.getElementById("stock-gula"))
-    document.getElementById("stock-gula").innerText = "Stok: " + stock.gula;
+if(produk == "Set Sudu & Garfu")
+document.getElementById("stock-sudu").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-popcorn"))
-    document.getElementById("stock-popcorn").innerText = "Stok: " + stock.popcorn;
+if(produk == "Tisu")
+document.getElementById("stock-tisu").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-biskut"))
-    document.getElementById("stock-biskut").innerText = "Stok: " + stock.biskut;
+if(produk == "Sejadah Mini")
+document.getElementById("stock-sejadah").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-makaron"))
-    document.getElementById("stock-makaron").innerText = "Stok: " + stock.makaron;
 
-if(document.getElementById("stock-kapas"))
-    document.getElementById("stock-kapas").innerText = "Stok: " + stock.kapas;
+// Birthday
+if(produk == "Gula-Gula")
+document.getElementById("stock-gula").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-kek"))
-    document.getElementById("stock-kek").innerText = "Stok: " + stock.kek;
+if(produk == "Popcorn")
+document.getElementById("stock-popcorn").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-minyak"))
-    document.getElementById("stock-minyak").innerText = "Stok: " + stock.minyak;
+if(produk == "Biskut Coklat Chip")
+document.getElementById("stock-biskut").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-sanitizer"))
-    document.getElementById("stock-sanitizer").innerText = "Stok: " + stock.sanitizer;
+if(produk == "Makaron Mini")
+document.getElementById("stock-makaron").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-bubble"))
-    document.getElementById("stock-bubble").innerText = "Stok: " + stock.bubble;
+if(produk == "Gula-Gula Kapas")
+document.getElementById("stock-kapas").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-kuku"))
-    document.getElementById("stock-kuku").innerText = "Stok: " + stock.kuku;
+if(produk == "Kek Cawan")
+document.getElementById("stock-kek").innerText = "Stok: " + stok;
+
+if(produk == "Wangian Kereta")
+document.getElementById("stock-minyak").innerText = "Stok: " + stok;
+
+if(produk == "Hand Sanitizer")
+document.getElementById("stock-sanitizer").innerText = "Stok: " + stok;
+
+if(produk == "bubble Wand")
+document.getElementById("stock-bubble").innerText = "Stok: " + stok;
+
+if(produk == "Penyepit Kuku")
+document.getElementById("stock-kuku").innerText = "Stok: " + stok;
 
 
 // Corporate
-if(document.getElementById("stock-pen"))
-    document.getElementById("stock-pen").innerText = "Stok: " + stock.pen;
+if(produk == "Pen")
+document.getElementById("stock-pen").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-cawan"))
-    document.getElementById("stock-cawan").innerText = "Stok: " + stock.cawan;
+if(produk == "Cawan")
+document.getElementById("stock-cawan").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-bukunota"))
-    document.getElementById("stock-bukunota").innerText = "Stok: " + stock.nota;
+if(produk == "Buku Nota")
+document.getElementById("stock-bukunota").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-termos"))
-    document.getElementById("stock-termos").innerText = "Stok: " + stock.termos;
+if(produk == "Termos")
+document.getElementById("stock-termos").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-kalender"))
-    document.getElementById("stock-kalender").innerText = "Stok: " + stock.kalender;
+if(produk == "Kelender")
+document.getElementById("stock-kalender").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-fail"))
-    document.getElementById("stock-fail").innerText = "Stok: " + stock.fail;
+if(produk == "Fail")
+document.getElementById("stock-fail").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-bekaspensil"))
-    document.getElementById("stock-bekaspensil").innerText = "Stok: " + stock.pensil;
+if(produk == "Bekas Pensil")
+document.getElementById("stock-bekaspensil").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-notapelekat"))
-    document.getElementById("stock-notapelekat").innerText = "Stok: " + stock.pelekat;
+if(produk == "Nota Pelekat Buku")
+document.getElementById("stock-notapelekat").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-lanyard"))
-    document.getElementById("stock-lanyard").innerText = "Stok: " + stock.lanyard;
+if(produk == "Lanyard")
+document.getElementById("stock-lanyard").innerText = "Stok: " + stok;
 
-if(document.getElementById("stock-kotakbekal"))
-    document.getElementById("stock-kotakbekal").innerText = "Stok: " + stock.bekal;
+if(produk == "Kotak Bekal")
+document.getElementById("stock-kotakbekal").innerText = "Stok: " + stok;
 
+}
 
+})
+.catch(error => {
+console.log("Ralat baca stok:", error);
+});
 
 }
