@@ -743,3 +743,10 @@ nav img{
     align-items:center !important;
     gap:10px !important;
 }
+.cart-title{
+    text-align:center;
+    color:#6d5a47;
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
