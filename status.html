@@ -77,11 +77,9 @@ Semak Status
 
 function semakStatus(){
 
-let phone =
-document.getElementById("phone").value;
+let phone = document.getElementById("phone").value;
 
 fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec?phone=" + phone)
-)
 
 .then(response => response.json())
 
@@ -96,19 +94,19 @@ return;
 }
 
 document.getElementById("result").innerHTML = `
-
 <p><b>Nama:</b> ${data.nama}</p>
-
 <p><b>Produk:</b> ${data.produk}</p>
-
 <p><b>Kuantiti:</b> ${data.kuantiti}</p>
-
 <p><b>Tarikh Tempahan:</b> ${data.tarikh}</p>
-
 <p><b>Status:</b> ${data.status}</p>
-
 `;
 
+})
+
+.catch(error => {
+console.log(error);
+document.getElementById("result").innerHTML =
+"<p>❌ Ralat mendapatkan data</p>";
 });
 
 }
