@@ -348,3 +348,24 @@ console.log("Ralat baca stok:", error);
 });
 
 }
+
+function checkPaymentRef(){
+
+    let ref = document.getElementById("refnumber").value.trim();
+
+    if(ref === ""){
+
+        alert("Sila masukkan DuitNow Ref Number.");
+
+        return;
+    }
+
+    if(ref.length < 10){
+
+        alert("DuitNow Ref Number tidak sah.");
+
+        return;
+    }
+
+    window.location.href = "checkout.html";
+}
