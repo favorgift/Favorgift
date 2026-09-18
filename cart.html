@@ -49,7 +49,7 @@
 
         <hr>
 
-       <h4>Kaedah Pembayaran</h4>
+      <h4>Kaedah Pembayaran</h4>
 
 <p><b>DuitNow QR</b></p>
 
@@ -57,14 +57,26 @@
      alt="QR DuitNow"
      class="payment-qr">
 
-<p>Sila scan QR untuk membuat pembayaran.</p>
+<p>
+1. Scan QR DuitNow di atas.<br>
+2. Buat pembayaran mengikut jumlah tempahan.<br>
+3. Selepas berjaya bayar, salin nombor rujukan (DuitNow Ref Number).<br>
+4. Tampal nombor rujukan tersebut di bawah.
+</p>
 
-        <br><br>
+<label><b>DuitNow Ref Number</b></label>
 
-        <button class="checkout-btn"
-        onclick="window.location.href='checkout.html'">
-            Teruskan Tempahan
-        </button>
+<input type="text"
+id="refnumber"
+placeholder="Contoh: 20260918BIMBMYKL040OQR75931013"
+required>
+
+<br><br>
+
+<button class="checkout-btn"
+onclick="window.location.href='checkout.html'">
+    Teruskan Tempahan
+</button>
 
     </div>
 
