@@ -836,3 +836,10 @@ nav img{
     margin-bottom:15px;
     font-size:14px;
 }
+iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    border-radius:15px;
+    margin:15px 0;
+}
