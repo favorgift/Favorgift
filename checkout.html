@@ -112,6 +112,9 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 })
 .catch(error => {
 
+    btn.disabled = false;
+    btn.innerHTML = "Hantar Tempahan";
+
     alert("Ralat menghantar tempahan");
     console.log(error);
 
