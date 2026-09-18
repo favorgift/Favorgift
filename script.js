@@ -86,8 +86,19 @@ function addToCart(name, price, image, pilihan){
 `;
     });
 
-    document.getElementById("total").innerHTML =
-    "Total: RM" + total.toFixed(2);
+  let totalItems = 0;
+
+cart.forEach(item => {
+    totalItems += item.quantity;
+});
+
+document.getElementById("jumlah-item").innerHTML = totalItems;
+
+document.getElementById("subtotal").innerHTML =
+"RM" + total.toFixed(2);
+
+document.getElementById("jumlah-bayar").innerHTML =
+"RM" + (total + 5).toFixed(2);
 } 
 
 function removeItem(index){
