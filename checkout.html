@@ -72,7 +72,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-   let data = {
+  let data = {
     nama: document.getElementById("nama").value,
     telefon: document.getElementById("telefon").value,
     email: document.getElementById("email").value,
@@ -83,7 +83,9 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     pilihan: cart.map(item => item.pilihan).join(", "),
 
     tarikhTempahan: document.getElementById("bookingDate").value,
-    tarikhMajlis: document.getElementById("tarikh").value
+    tarikhMajlis: document.getElementById("tarikh").value,
+
+    refNumber: localStorage.getItem("duitnowRef")
 };
 
    fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec", {
