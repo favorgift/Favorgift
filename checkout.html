@@ -70,7 +70,12 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
     e.preventDefault();
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let btn = document.querySelector(".submit-btn");
+
+    btn.disabled = true;
+    btn.innerHTML = "Menghantar Tempahan...";
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   let data = {
     nama: document.getElementById("nama").value,
