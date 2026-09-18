@@ -65,7 +65,7 @@ placeholder="Masukkan No Telefon(Cth:1234567890)">
 
 <br>
 
-<button onclick="semakStatus()">
+<button id="semakBtn" onclick="semakStatus()">
 Semak Status
 </button>
 
@@ -83,6 +83,11 @@ class="back-btn">
 
 function semakStatus(){
 
+let btn = document.getElementById("semakBtn");
+
+btn.disabled = true;
+btn.innerHTML = "Sedang Menyemak...";
+
 let phone = document.getElementById("phone").value;
 
 fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec?phone=" + phone)
@@ -96,10 +101,17 @@ if(data.status == "Tiada Tempahan Dijumpai"){
 document.getElementById("result").innerHTML =
 "<p>❌ Tiada Tempahan Dijumpai</p>";
 
+btn.disabled = false;
+btn.innerHTML = "Semak Status";
+
 return;
 }
 
 document.getElementById("result").innerHTML = `
+
+btn.disabled = false;
+btn.innerHTML = "Semak Status";
+
 <p><b>Nama:</b> ${data.nama}</p>
 <p><b>Produk:</b> ${data.produk}</p>
 <p><b>Kuantiti:</b> ${data.kuantiti}</p>
