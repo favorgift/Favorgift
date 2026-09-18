@@ -770,6 +770,7 @@ nav img{
     box-shadow:0 3px 10px rgba(0,0,0,0.1);
     position:sticky;
     top:20px;
+    margin-top:75px;
 }
 
 .cart-right h3{
