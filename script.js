@@ -360,7 +360,7 @@ function checkPaymentRef(){
         return;
     }
 
-    if(ref.length < 10){
+    if(ref.length < 15){
 
         alert("DuitNow Ref Number tidak sah.");
 
