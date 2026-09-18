@@ -23,16 +23,59 @@
 
 <section class="cart-page">
 
-   <h1 class="cart-title">MY CART</h1>
+<div class="cart-layout">
 
-    <div id="cart-items"></div>
-<br>
-    <h2 id="total">Total: RM0</h4>
+    <div class="cart-left">
 
-    <button class="checkout-btn"
-onclick="window.location.href='checkout.html'">
-    Checkout
-</button>
+        <h1 class="cart-title">MY CART</h1>
+
+        <div id="cart-items"></div>
+
+    </div>
+
+    <div class="cart-right">
+
+        <h3>Ringkasan Tempahan</h3>
+
+        <p>Jumlah Item: <span id="jumlah-item">0</span></p>
+
+        <p>Subtotal: <span id="subtotal">RM0.00</span></p>
+
+        <p>Penghantaran: RM5.00</p>
+
+        <hr>
+
+        <h3>Jumlah: <span id="jumlah-bayar">RM0.00</span></h3>
+
+        <hr>
+
+        <h4>Kaedah Pembayaran</h4>
+
+        <label>
+            <input type="radio" name="payment">
+            Online Banking
+        </label><br>
+
+        <label>
+            <input type="radio" name="payment">
+            DuitNow QR
+        </label><br>
+
+        <label>
+            <input type="radio" name="payment">
+            Bayar Semasa Ambil
+        </label>
+
+        <br><br>
+
+        <button class="checkout-btn"
+        onclick="window.location.href='checkout.html'">
+            Teruskan Tempahan
+        </button>
+
+    </div>
+
+</div>
 
 </section>
 
