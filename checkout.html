@@ -85,15 +85,15 @@ let data = {
     email: document.getElementById("email").value,
 
     produk: cart.map(item => item.name).join(", "),
-    kuantiti: cart.map(item => item.quantity).join(", "),
+
+    kuantiti: "'" + cart.map(item => item.quantity).join(", "),
 
     pilihan: cart.map(item => item.pilihan).join(", "),
-
     tarikhTempahan: document.getElementById("bookingDate").value,
     tarikhMajlis: document.getElementById("tarikh").value,
 
     refnumber: refNumber
-};
+};;
 
   fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
     method: "POST",
