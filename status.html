@@ -97,18 +97,31 @@ function semakStatus(){
         btn.innerHTML = "Semak Status";
 
         if(data.status == "Tiada Tempahan Dijumpai"){
-            document.getElementById("result").innerHTML = "<p>❌ Tiada Tempahan Dijumpai</p>";
-            return;
-        }
+    document.getElementById("result").innerHTML =
+    "<p>❌ Tiada Tempahan Dijumpai</p>";
+    return;
+}
 
-        document.getElementById("result").innerHTML = `
-            <p><b>Nama:</b> ${data.nama}</p>
-            <p><b>Produk:</b> ${data.produk}</p>
-            <p><b>Kuantiti:</b> ${data.kuantiti}</p>
-            <p><b>Tarikh Tempahan:</b> ${data.tarikh}</p>
-            <p><b>Status Tempahan:</b> ${data.status}</p>
-            <p><b>Status Pembayaran:</b> ${data.pembayaran}</p>
-        `;
+let html = "";
+
+data.forEach((item,index)=>{
+
+html += `
+<hr>
+
+<h3>Tempahan ${index + 1}</h3>
+
+<p><b>Nama:</b> ${item.nama}</p>
+<p><b>Produk:</b> ${item.produk}</p>
+<p><b>Kuantiti:</b> ${item.kuantiti}</p>
+<p><b>Tarikh Tempahan:</b> ${item.tarikh}</p>
+<p><b>Status Tempahan:</b> ${item.status}</p>
+<p><b>Status Pembayaran:</b> ${item.pembayaran}</p>
+`;
+
+});
+
+document.getElementById("result").innerHTML = html;
     })
     .catch(error => {
         console.log(error);
