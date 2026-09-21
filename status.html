@@ -83,52 +83,39 @@ class="back-btn">
 
 function semakStatus(){
 
-let btn = document.getElementById("semakBtn");
+    let btn = document.getElementById("semakBtn");
+    btn.disabled = true;
+    btn.innerHTML = "Sedang Menyemak...";
 
-btn.disabled = true;
-btn.innerHTML = "Sedang Menyemak...";
+    let phone = document.getElementById("phone").value;
 
-let phone = document.getElementById("phone").value;
+    fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec?phone=" + phone)
+    .then(response => response.json())
+    .then(data => {
 
-fetch("https://script.google.com/macros/s/AKfycby0E7MqPgwm2PlhGbOaUudV7YjMNH0Ruh0zgGU8vO2n_OzbPYpcvVng-_BM04A-s40xlQ/exec?phone=" + phone)
+        btn.disabled = false;
+        btn.innerHTML = "Semak Status";
 
-.then(response => response.json())
+        if(data.status == "Tiada Tempahan Dijumpai"){
+            document.getElementById("result").innerHTML = "<p>❌ Tiada Tempahan Dijumpai</p>";
+            return;
+        }
 
-.then(data => {
-
-if(data.status == "Tiada Tempahan Dijumpai"){
-
-document.getElementById("result").innerHTML =
-"<p>❌ Tiada Tempahan Dijumpai</p>";
-
-btn.disabled = false;
-btn.innerHTML = "Semak Status";
-
-return;
-}
-
-document.getElementById("result").innerHTML = `
-
-btn.disabled = false;
-btn.innerHTML = "Semak Status";
-
-document.getElementById("result").innerHTML = `
-<p><b>Nama:</b> ${data.nama}</p>
-<p><b>Produk:</b> ${data.produk}</p>
-<p><b>Kuantiti:</b> ${data.kuantiti}</p>
-<p><b>Tarikh Tempahan:</b> ${data.tarikh}</p>
-<p><b>Status Tempahan:</b> ${data.status}</p>
-<p><b>Status Pembayaran:</b> ${data.pembayaran}</p>
-`;
-
-})
-
-.catch(error => {
-console.log(error);
-document.getElementById("result").innerHTML =
-"<p>❌ Ralat mendapatkan data</p>";
-});
-
+        document.getElementById("result").innerHTML = `
+            <p><b>Nama:</b> ${data.nama}</p>
+            <p><b>Produk:</b> ${data.produk}</p>
+            <p><b>Kuantiti:</b> ${data.kuantiti}</p>
+            <p><b>Tarikh Tempahan:</b> ${data.tarikh}</p>
+            <p><b>Status Tempahan:</b> ${data.status}</p>
+            <p><b>Status Pembayaran:</b> ${data.pembayaran}</p>
+        `;
+    })
+    .catch(error => {
+        console.log(error);
+        btn.disabled = false;
+        btn.innerHTML = "Semak Status";
+        document.getElementById("result").innerHTML = "<p>❌ Ralat mendapatkan data</p>";
+    });
 }
 
 </script>
