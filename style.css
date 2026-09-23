@@ -187,3 +187,30 @@ nav ul li a:hover{
     padding:20px;
     color:#6D5D50;
 }
+.features{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fffaf8;
+    padding:35px 20px;
+    flex-wrap:wrap;
+}
+
+.feature-item{
+    flex:1;
+    text-align:center;
+    color:#b88a6a;
+    font-size:32px;
+    padding:0 20px;
+    border-right:1px solid #d9c8b8;
+}
+
+.feature-item:last-child{
+    border-right:none;
+}
+
+.feature-item p{
+    margin-top:10px;
+    font-size:14px;
+    color:#6d5a47;
+}
