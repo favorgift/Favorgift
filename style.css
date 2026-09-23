@@ -905,3 +905,25 @@ nav img{
     border-radius:8px;
     cursor:pointer;
 }
+
+/*index.html*/
+.features{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    padding:30px 20px;
+    background:#fffaf6;
+    text-align:center;
+    flex-wrap:wrap;
+}
+
+.feature-item{
+    font-size:30px;
+    color:#b88a6a;
+}
+
+.feature-item p{
+    font-size:14px;
+    color:#5d5d5d;
+    margin-top:10px;
+}
