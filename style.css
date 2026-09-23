@@ -1155,3 +1155,21 @@ nav ul{
 .remove-btn:hover{
     background:#B39574 !important;
 }
+.product-card button{
+    width:100%;
+    padding:12px;
+    background:#B39574;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+.product-card button:hover{
+    background:#9F8163;
+    transform:translateY(-2px);
+}
