@@ -1309,3 +1309,32 @@ nav ul{
 .product-card button{
     margin-top:auto;
 }
+.popular-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.popular-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+
+.popular-card:hover{
+    transform:translateY(-8px);
+}
+
+.popular-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.popular-card h3{
+    padding:20px;
+    color:#5f4630;
+}
