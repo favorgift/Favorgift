@@ -1173,3 +1173,90 @@ nav ul{
     background:#9F8163;
     transform:translateY(-2px);
 }
+/* =========================
+   STATUS PAGE FINAL
+========================= */
+
+.status-page{
+    min-height:100vh;
+    padding:140px 20px 80px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.status-container{
+    width:100%;
+    max-width:800px;
+    background:#ffffff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.status-container h1{
+    color:#6D5D50;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.status-container p{
+    color:#777;
+    margin-bottom:25px;
+}
+
+.status-container input{
+    width:100%;
+    padding:15px;
+    border:2px solid #E6DDD4;
+    border-radius:12px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.status-container input:focus{
+    outline:none;
+    border-color:#B88A6A;
+}
+
+.status-container button{
+    background:#B88A6A;
+    color:white;
+    border:none;
+    padding:14px 25px;
+    border-radius:12px;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.status-container button:hover{
+    background:#9D7C5B;
+    transform:translateY(-2px);
+}
+
+.back-btn{
+    margin-top:20px;
+}
+
+#result{
+    margin-top:30px;
+}
+
+.status-card{
+    background:#FDF9F5;
+    border-left:5px solid #B88A6A;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.status-card h3{
+    color:#6D5D50;
+    margin-bottom:15px;
+}
+
+.status-card p{
+    margin:8px 0;
+    color:#555;
+}
