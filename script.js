@@ -152,7 +152,6 @@ function updateQty(index, value){
     displayCart();
     updateCartCount();
 }
-
 function updateCartCount(){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -160,15 +159,13 @@ function updateCartCount(){
     let totalItems = 0;
 
     cart.forEach(item => {
-
         totalItems += item.quantity || 1;
-
     });
 
-    let countElement = document.getElementById("cart-count");
+    let count = document.getElementById("cart-count");
 
-    if(countElement){
-        countElement.innerText = totalItems;
+    if(count){
+        count.innerText = totalItems;
     }
 }
 
