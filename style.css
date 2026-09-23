@@ -1338,3 +1338,37 @@ nav ul{
     padding:20px;
     color:#5f4630;
 }
+.popular-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.popular-card{
+    width:180px; /* kecilkan kad */
+    padding:15px;
+    text-align:center;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    text-decoration:none;
+    color:#5f4630;
+    transition:0.3s;
+}
+
+.popular-card img{
+    width:100%;
+    height:120px; /* kecilkan gambar */
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.popular-card h3{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.popular-card:hover{
+    transform:translateY(-5px);
+}
