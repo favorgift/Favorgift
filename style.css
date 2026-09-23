@@ -1035,3 +1035,93 @@ nav ul{
     text-align:center;
     background:#F7F2ED;
 }
+
+/* =========================
+   CHECKOUT PAGE
+========================= */
+
+.checkout-page{
+    padding:120px 8% 60px;
+}
+
+.checkout-container{
+    max-width:900px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.checkout-page h1{
+    color:#6D5D50;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.checkout-subtitle{
+    color:#8B7D72;
+    margin-bottom:30px;
+}
+
+.checkout-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.checkout-form label{
+    display:block;
+    margin-bottom:8px;
+    color:#6D5D50;
+    font-weight:600;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    background:#fff;
+    font-size:15px;
+}
+
+.checkout-form textarea{
+    resize:none;
+    min-height:120px;
+}
+
+.checkout-form textarea,
+.checkout-form .submit-btn{
+    grid-column:span 2;
+}
+
+.submit-btn{
+    background:#B88A6A;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#A47557;
+}
+
+@media(max-width:768px){
+
+.checkout-form{
+    grid-template-columns:1fr;
+}
+
+.checkout-form textarea,
+.checkout-form .submit-btn{
+    grid-column:span 1;
+}
+
+}
