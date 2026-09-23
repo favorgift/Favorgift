@@ -422,19 +422,99 @@ nav ul li a:hover{
 }
 
 /* =========================
-   BUTTON TAMBAH TROLI
+   CART BUTTONS
 ========================= */
 
-.product-card button{
-    width:100%;
-    padding:14px;
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+.qty-box button{
+    width:38px;
+    height:38px;
     border:none;
-    border-radius:30px;
+    border-radius:10px;
     background:#B88A6A;
-    color:white;
+    color:#fff;
+    font-size:18px;
     font-weight:600;
     cursor:pointer;
     transition:0.3s;
+}
+
+.qty-box button:hover{
+    background:#9D6D4F;
+    transform:translateY(-2px);
+}
+
+.qty-box input{
+    width:60px;
+    height:38px;
+    text-align:center;
+    border:1px solid #D9CBBF;
+    border-radius:10px;
+    background:#fff;
+}
+
+/* Buang Button */
+
+.remove-btn{
+    width:120px !important;
+    background:#C97B63 !important;
+    color:white !important;
+    border:none !important;
+    border-radius:10px !important;
+    padding:10px 15px !important;
+    font-size:14px !important;
+    font-weight:600 !important;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.remove-btn:hover{
+    background:#B4624A !important;
+}
+
+/* Checkout Button */
+
+.checkout-btn{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:12px;
+    background:#B88A6A;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.checkout-btn:hover{
+    background:#9D6D4F;
+}
+
+/* Semak Status */
+
+.cart-right button:last-child{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius:12px;
+    background:#8A6A50;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.cart-right button:last-child:hover{
+    background:#71553F;
 }
 
 .product-card button:hover{
