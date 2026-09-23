@@ -571,95 +571,6 @@ nav ul li a:hover{
 }
 
 /* =========================
-   ABOUT PAGE
-========================= */
-
-.about-banner{
-    padding:140px 8% 60px;
-    text-align:center;
-    background:#F8F4EF;
-    display:block;
-}
-
-.about-banner h1{
-    font-size:48px;
-    color:#6D5D50;
-    margin-bottom:15px;
-}
-
-.about-banner p{
-    max-width:700px;
-    margin:auto;
-    color:#777;
-}
-
-.about-content{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    padding:80px 8%;
-    background:white;
-}
-
-.about-image{
-    flex:1;
-    text-align:center;
-}
-
-.about-image img{
-    width:100%;
-    max-width:420px;
-    border-radius:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-.about-text{
-    flex:1;
-    max-width:600px;
-}
-
-.about-text h2{
-    font-size:32px;
-    margin-bottom:15px;
-    color:#6D5D50;
-}
-
-.about-text p{
-    line-height:1.9;
-    margin-bottom:20px;
-    color:#666;
-}
-
-.about-text li{
-    margin-bottom:10px;
-}
-
-.about-project{
-    text-align:center;
-    padding:70px 8%;
-    background:#F8F4EF;
-}
-
-.why-choose-us{
-    padding:80px 8%;
-    background:white;
-}
-
-.choose-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.choose-card{
-    background:#F8F4EF;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-}
-
-/* =========================
    CONTACT PAGE
 ========================= */
 
@@ -849,4 +760,134 @@ nav ul{
     font-size:17px;
     line-height:1.8;
     color:#555;
+}
+/* =========================
+   ABOUT US PAGE
+========================= */
+
+.about-banner{
+    padding:130px 8% 60px;
+    text-align:center;
+    background:#F7F2ED;
+}
+
+.about-banner h1{
+    font-size:48px;
+    color:#6D5D50;
+    margin-bottom:15px;
+}
+
+.about-banner p{
+    font-size:18px;
+    color:#777;
+}
+
+.about-content{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 8%;
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.about-image{
+    flex:1;
+    text-align:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:32px;
+    color:#6D5D50;
+    margin-bottom:15px;
+    margin-top:25px;
+}
+
+.about-text p{
+    font-size:17px;
+    line-height:1.8;
+    color:#555;
+}
+
+.about-text ul{
+    padding-left:20px;
+}
+
+.about-text li{
+    margin-bottom:10px;
+    color:#555;
+    line-height:1.7;
+}
+
+.about-project{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 8% 80px;
+    text-align:center;
+}
+
+.about-project h2{
+    font-size:36px;
+    color:#6D5D50;
+    margin-bottom:20px;
+}
+
+.about-project p{
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+}
+
+.why-choose-us{
+    background:#F7F2ED;
+    padding:80px 8%;
+}
+
+.why-choose-us h2{
+    text-align:center;
+    color:#6D5D50;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.choose-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.choose-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.choose-card:hover{
+    transform:translateY(-8px);
+}
+
+.choose-card h3{
+    color:#6D5D50;
+    margin-bottom:12px;
+}
+
+.choose-card p{
+    color:#666;
+    line-height:1.7;
 }
