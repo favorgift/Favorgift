@@ -214,3 +214,50 @@ nav ul li a:hover{
     font-size:14px;
     color:#6d5a47;
 }
+/* =========================
+   KATEGORI DOORGIFT
+========================= */
+
+.categories{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:38px;
+    color:#5b4636;
+    margin-bottom:50px;
+}
+
+.category-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:25px;
+    color:#5b4636;
+    font-size:24px;
+    font-weight:500;
+}
