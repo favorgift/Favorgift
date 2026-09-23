@@ -1143,3 +1143,15 @@ nav ul{
     background:#C5B6A5;
     transform:translateY(-2px);
 }
+.remove-btn{
+    background:#C9B29B !important;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.remove-btn:hover{
+    background:#B39574 !important;
+}
