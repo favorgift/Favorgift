@@ -1300,16 +1300,7 @@ nav ul{
     gap:30px;
     margin-top:40px;
 }
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    align-items:stretch;
-}
 
-.product-card{
-    min-height:900px;
-}
 .product-card{
     display:flex;
     flex-direction:column;
