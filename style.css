@@ -1125,3 +1125,21 @@ nav ul{
 }
 
 }
+.status-btn{
+    width:100%;
+    margin-top:15px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#D6CBBF;
+    color:#5A4A3A;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.status-btn:hover{
+    background:#C5B6A5;
+    transform:translateY(-2px);
+}
