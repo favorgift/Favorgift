@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ms">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Semak Status Tempahan</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
+
+</head>
 
 <body>
 
@@ -19,7 +23,11 @@
         <li><a href="status.html">Status</a></li>
         <li><a href="about.html">Tentang Kami</a></li>
         <li><a href="contact.html">Hubungi Kami</a></li>
-        <li><a href="cart.html">🛒 <span id="cart-count">0</span></a></li>
+        <li>
+            <a href="cart.html">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </li>
     </ul>
 </nav>
 
@@ -45,8 +53,8 @@ Semak Status
 <div id="result"></div>
 
 <button
-onclick="window.location.href='products.html'"
-class="back-btn">
+class="back-btn"
+onclick="window.location.href='products.html'">
 ← Kembali ke Produk
 </button>
 
@@ -54,83 +62,86 @@ class="back-btn">
 
 </section>
 
-</body>
-
-<div class="container">
-
-<h2>Semak Status Tempahan</h2>
-
-<input
-type="text"
-id="phone"
-placeholder="Masukkan No Telefon(Cth:1234567890)">
-
-<br>
-
-<button id="semakBtn" onclick="semakStatus()">
-Semak Status
-</button>
-
-<div id="result"></div>
-
-<button
-onclick="window.location.href='products.html'"
-class="back-btn">
-← Kembali ke Produk
-</button>
-    
-</div>
+<script src="script.js"></script>
 
 <script>
 
 function semakStatus(){
 
     let btn = document.getElementById("semakBtn");
+
     btn.disabled = true;
     btn.innerHTML = "Sedang Menyemak...";
 
-    let phone = document.getElementById("phone").value;
+    let phone = document.getElementById("phone").value.trim();
+
+    if(phone === ""){
+
+        alert("Sila masukkan nombor telefon.");
+
+        btn.disabled = false;
+        btn.innerHTML = "Semak Status";
+
+        return;
+    }
 
     fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec?phone=" + phone)
+
     .then(response => response.json())
+
     .then(data => {
 
         btn.disabled = false;
         btn.innerHTML = "Semak Status";
 
-        if(data.status == "Tiada Tempahan Dijumpai"){
-    document.getElementById("result").innerHTML =
-    "<p>❌ Tiada Tempahan Dijumpai</p>";
-    return;
-}
+        if(data.status === "Tiada Tempahan Dijumpai"){
 
-let html = "";
+            document.getElementById("result").innerHTML =
+            "<p>❌ Tiada Tempahan Dijumpai</p>";
 
-data.forEach((item,index)=>{
+            return;
+        }
 
-html += `
-<hr>
+        let html = "";
 
-<h3>Tempahan ${index + 1}</h3>
+        data.forEach((item,index)=>{
 
-<p><b>Nama:</b> ${item.nama}</p>
-<p><b>Produk:</b> ${item.produk}</p>
-<p><b>Kuantiti:</b> ${item.kuantiti}</p>
-<p><b>Tarikh Tempahan:</b> ${item.tarikh}</p>
-<p><b>Status Tempahan:</b> ${item.status}</p>
-<p><b>Status Pembayaran:</b> ${item.pembayaran}</p>
-`;
+            html += `
+            <div class="status-card">
 
-});
+            <h3>Tempahan ${index + 1}</h3>
 
-document.getElementById("result").innerHTML = html;
+            <p><b>Nama:</b> ${item.nama}</p>
+
+            <p><b>Produk:</b> ${item.produk}</p>
+
+            <p><b>Kuantiti:</b> ${item.kuantiti}</p>
+
+            <p><b>Tarikh Tempahan:</b> ${item.tarikh}</p>
+
+            <p><b>Status Tempahan:</b> ${item.status}</p>
+
+            <p><b>Status Pembayaran:</b> ${item.pembayaran}</p>
+
+            </div>
+            `;
+        });
+
+        document.getElementById("result").innerHTML = html;
+
     })
+
     .catch(error => {
+
         console.log(error);
+
         btn.disabled = false;
         btn.innerHTML = "Semak Status";
-        document.getElementById("result").innerHTML = "<p>❌ Ralat mendapatkan data</p>";
+
+        document.getElementById("result").innerHTML =
+        "<p>❌ Ralat mendapatkan data</p>";
     });
+
 }
 
 </script>
