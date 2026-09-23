@@ -440,3 +440,349 @@ nav ul li a:hover{
 .product-card button:hover{
     background:#8B6A4E;
 }
+/* =========================
+   CART PAGE
+========================= */
+
+.cart-page{
+    padding:120px 8% 60px;
+}
+
+.cart-title{
+    margin-bottom:25px;
+    color:#6d5d4b;
+}
+
+.cart-layout{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.cart-left{
+    flex:3;
+}
+
+.cart-right{
+    flex:1;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    position:sticky;
+    top:100px;
+}
+
+.cart-item{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.cart-image{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h3{
+    color:#6d5d4b;
+    margin-bottom:10px;
+}
+
+.cart-action{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.qty-box button{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:8px;
+    background:#c7b299;
+    color:white;
+    cursor:pointer;
+}
+
+.qty-box input{
+    width:60px;
+    text-align:center;
+    padding:8px;
+}
+
+.remove-btn{
+    background:#d9534f;
+}
+
+.remove-btn:hover{
+    background:#c9302c;
+}
+
+/* QR */
+
+.payment-qr{
+    width:220px;
+    display:block;
+    margin:15px auto;
+    border-radius:15px;
+    border:5px solid #f5efe6;
+}
+
+#refnumber{
+    width:100%;
+    padding:12px;
+    border:2px solid #d8c3a5;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.checkout-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#a88b6a;
+    color:white;
+    font-size:16px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.checkout-btn:hover{
+    background:#8f7457;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-banner{
+    padding:120px 8% 60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image img{
+    width:350px;
+    max-width:100%;
+}
+
+.about-text{
+    max-width:600px;
+}
+
+.about-text h2{
+    color:#7c6852;
+    margin-bottom:15px;
+}
+
+.about-text p,
+.about-text li{
+    line-height:1.8;
+}
+
+.about-project{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.why-choose-us{
+    padding:60px 8%;
+    background:#fff;
+}
+
+.why-choose-us h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#7c6852;
+}
+
+.choose-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.choose-card{
+    background:#fdf9f4;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page{
+    padding:120px 8% 60px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-map{
+    width:100%;
+    height:350px;
+    border:none;
+    border-radius:15px;
+    margin:20px 0;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.contact-form button{
+    width:220px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#a88b6a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-image-box img{
+    width:280px;
+}
+
+.cart-layout{
+    flex-direction:column;
+}
+
+.cart-right{
+    width:100%;
+    position:static;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+/* =========================
+   STATUS PAGE
+========================= */
+
+.status-page{
+    padding:120px 8% 60px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.container h2{
+    color:#7c6852;
+    margin-bottom:20px;
+}
+
+.container input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    margin-bottom:15px;
+    font-size:15px;
+}
+
+.container button{
+    background:#a88b6a;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.container button:hover{
+    background:#8f7457;
+}
+
+#result{
+    margin-top:25px;
+    text-align:left;
+}
+
+#result hr{
+    border:none;
+    border-top:1px solid #ddd;
+    margin:20px 0;
+}
+
+#result h3{
+    color:#7c6852;
+    margin-bottom:10px;
+}
+
+#result p{
+    margin-bottom:8px;
+}
+
+.back-btn{
+    margin-top:25px;
+}
