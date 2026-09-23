@@ -285,3 +285,182 @@ nav ul li a:hover{
 .product:hover{
     transform:translateY(-5px);
 }
+
+/* ===================================
+   PRODUCTS PAGE
+=================================== */
+
+.product-page{
+    padding:80px 8%;
+}
+
+.product-page h1{
+    text-align:center;
+    font-size:50px;
+    color:#6B5B4D;
+    margin-bottom:15px;
+}
+
+.product-page p{
+    text-align:center;
+}
+
+.product-page h2{
+    margin-top:50px;
+    margin-bottom:25px;
+    color:#6B5B4D;
+    font-size:32px;
+}
+
+/* ===================================
+   PRODUCT GRID
+=================================== */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:30px;
+}
+
+/* ===================================
+   PRODUCT CARD
+=================================== */
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    display:flex;
+    flex-direction:column;
+    transition:0.3s;
+    min-height:700px;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.product-card h3{
+    margin-top:15px;
+    color:#6B5B4D;
+    text-align:center;
+}
+
+.product-card .price{
+    color:#8B7355;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:8px;
+    text-align:center;
+}
+
+.product-card .description{
+    margin-top:10px;
+    color:#555;
+    font-size:14px;
+    text-align:left;
+}
+
+/* ===================================
+   STOCK
+=================================== */
+
+.product-card p[id^="stock"]{
+    margin-top:10px;
+    color:#2e7d32;
+    font-weight:bold;
+    text-align:center;
+}
+
+/* ===================================
+   PRODUCT SPECIFICATION
+=================================== */
+
+.product-spec{
+    margin-top:15px;
+    background:#faf7f2;
+    padding:12px;
+    border-radius:12px;
+    text-align:left;
+}
+
+.product-spec h4{
+    color:#6B5B4D;
+    margin-bottom:8px;
+}
+
+.product-spec ul{
+    padding-left:18px;
+}
+
+.product-spec li{
+    font-size:13px;
+    margin-bottom:5px;
+    color:#555;
+}
+
+/* ===================================
+   DROPDOWN OPTION
+=================================== */
+
+.product-card select{
+    width:100%;
+    padding:10px;
+    margin-top:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    background:white;
+    cursor:pointer;
+}
+
+/* ===================================
+   ADD TO CART BUTTON
+=================================== */
+
+.product-card button{
+    margin-top:auto;
+    width:100%;
+    background:#8B7355;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.product-card button:hover{
+    background:#6d5a47;
+}
+
+/* ===================================
+   CART COUNTER
+=================================== */
+
+#cart-count{
+    background:white;
+    color:#6B5B4D;
+    padding:2px 8px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* ===================================
+   PRODUCT SECTION SPACING
+=================================== */
+
+.product-grid + h2{
+    margin-top:80px;
+}
