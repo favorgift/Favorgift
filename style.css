@@ -1278,3 +1278,21 @@ nav ul{
     background:#9D7A5D;
     transform:translateY(-2px);
 }
+.product-card{
+    background:#fff;
+    border-radius:22px;
+    padding:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+.product-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
