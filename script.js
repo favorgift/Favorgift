@@ -355,7 +355,7 @@ function checkPaymentRef(){
         return;
     }
 
-    if(ref.length < 15){
+    if(ref.length < 8){
 
         alert("DuitNow Ref Number tidak sah.");
         return;
