@@ -101,8 +101,8 @@ if(!receipt){
     return;
 }
 
-    let receiptFile =
-localStorage.getItem("receiptLink") || "";
+  let receiptFile =
+document.getElementById("receipt").files[0];
 
 let data = {
     nama: document.getElementById("nama").value,
