@@ -101,8 +101,11 @@ if(!receipt){
     return;
 }
 
-  let receiptFile =
-document.getElementById("receipt").files[0];
+let file = document.getElementById("receipt").files[0];
+
+let reader = new FileReader();
+
+reader.onload = function() {
 
 let data = {
     nama: document.getElementById("nama").value,
@@ -110,16 +113,44 @@ let data = {
     email: document.getElementById("email").value,
 
     produk: cart.map(item => item.name).join(", "),
-
     kuantiti: "'" + cart.map(item => item.quantity).join(", "),
-
     pilihan: cart.map(item => item.pilihan).join(", "),
-    tarikhTempahan: document.getElementById("bookingDate").value,
+
     tarikhMajlis: document.getElementById("tarikh").value,
 
-    receipt: receiptFile
-    
-};;
+    receipt: reader.result
+};
+
+fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+})
+.then(() => {
+
+    alert("Tempahan berjaya dihantar!");
+
+    localStorage.removeItem("cart");
+
+    window.location.href = "index.html";
+
+})
+.catch(error => {
+
+    btn.disabled = false;
+    btn.innerHTML = "Hantar Tempahan";
+
+    alert("Ralat menghantar tempahan");
+    console.log(error);
+
+});
+
+};
+
+reader.readAsDataURL(file);
 
   fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
     method: "POST",
