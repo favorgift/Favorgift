@@ -68,23 +68,24 @@
 4. Tampal nombor rujukan tersebut di bawah.
 </p>
 
-<label><b>DuitNow Ref Number</b></label>
+<label><b>Muat Naik Bukti Pembayaran</b></label>
 
-<input type="text"
-id="refnumber"
-placeholder="Contoh: 20260918BIMBMYKL040OQR75931013"
+<input
+type="file"
+id="receipt"
+accept="image/*,.pdf"
 required>
 
 <br><br>
 
 <button class="checkout-btn"
-onclick="checkPaymentRef()">
-    Teruskan Tempahan
+onclick="window.location.href='checkout.html'">
+Teruskan Tempahan
 </button>
 
-      <button class="status-btn"
+<button class="status-btn"
 onclick="window.location.href='status.html'">
-    Semak Status
+Semak Status
 </button>
 
     </div>
