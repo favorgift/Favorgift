@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,12 +54,17 @@ Sila lengkapkan maklumat tempahan anda.
             <option>Korporat</option>
         </select>
 
-         <label>Tarikh Tempahan</label>
-        <input type="date" id="bookingDate" required>
+    <label>Bukti Pembayaran</label>
 
-        <label>Masa Tempahan</label>
-        <input type="time" id="bookingTime" required>
+     <input
+        type="file"
+        id="receipt"
+        accept="image/*"
+        required>
 
+        <small>
+        Sila muat naik gambar resit pembayaran.
+        </small>
 
         <label>Catatan Tambahan</label>
         <textarea id="catatan" rows="4"></textarea>
