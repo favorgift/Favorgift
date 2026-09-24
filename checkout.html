@@ -120,7 +120,8 @@ let data = {
 
     receipt: reader.result
 };
-fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
+
+  fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
     method: "POST",
     mode: "no-cors",
     headers: {
@@ -151,32 +152,6 @@ fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzF
 
 reader.readAsDataURL(file);
 
-  fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-})
-.then(() => {
-
-    alert("Tempahan berjaya dihantar!");
-
-    localStorage.removeItem("cart");
-
-    window.location.href = "index.html";
-
-})
-.catch(error => {
-
-    btn.disabled = false;
-    btn.innerHTML = "Hantar Tempahan";
-
-    alert("Ralat menghantar tempahan");
-    console.log(error);
-
-});
 });
 </script>
 </body>
