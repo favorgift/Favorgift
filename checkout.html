@@ -101,6 +101,9 @@ if(!receipt){
     return;
 }
 
+    let receiptFile =
+localStorage.getItem("receiptLink") || "";
+
 let data = {
     nama: document.getElementById("nama").value,
     telefon: document.getElementById("telefon").value,
@@ -114,7 +117,8 @@ let data = {
     tarikhTempahan: document.getElementById("bookingDate").value,
     tarikhMajlis: document.getElementById("tarikh").value,
 
-  
+    receipt: receiptFile
+    
 };;
 
   fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
