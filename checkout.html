@@ -89,23 +89,24 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let data = {
-        nama: document.getElementById("nama").value,
-        telefon: document.getElementById("telefon").value,
-        email: document.getElementById("email").value,
+   let data = {
+    nama: document.getElementById("nama").value,
+    telefon: document.getElementById("telefon").value,
+    email: document.getElementById("email").value,
 
-        produk: cart.map(item => item.name).join(", "),
-        kuantiti: "'" + cart.map(item => item.quantity).join(", "),
-        pilihan: cart.map(item => item.pilihan).join(", "),
+    produk: cart.map(item => item.name).join(", "),
+    kuantiti: "'" + cart.map(item => item.quantity).join(", "),
+    pilihan: cart.map(item => item.pilihan).join(", "),
 
-        tarikhMajlis: document.getElementById("tarikh").value,
+    tarikhMajlis: document.getElementById("tarikh").value,
 
-        refNumber: document.getElementById("paymentRef").value
-    };
+    refNumber: document.getElementById("paymentRef").value
+};
 
-    localStorage.setItem("paymentRef",
-    document.getElementById("paymentRef").value);
-
+localStorage.setItem(
+    "paymentRef",
+    document.getElementById("paymentRef").value
+);
     fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
         method: "POST",
         mode: "no-cors",
