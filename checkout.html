@@ -77,6 +77,7 @@ Masukkan nombor rujukan pembayaran DuitNow / Online Banking.
 </section>
 
 <script>
+
 document.getElementById("orderForm").addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -86,56 +87,51 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     btn.disabled = true;
     btn.innerHTML = "Menghantar Tempahan...";
 
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    
+    let data = {
+        nama: document.getElementById("nama").value,
+        telefon: document.getElementById("telefon").value,
+        email: document.getElementById("email").value,
 
+        produk: cart.map(item => item.name).join(", "),
+        kuantiti: "'" + cart.map(item => item.quantity).join(", "),
+        pilihan: cart.map(item => item.pilihan).join(", "),
 
-let data = {
-    nama: document.getElementById("nama").value,
-    telefon: document.getElementById("telefon").value,
-    email: document.getElementById("email").value,
+        tarikhMajlis: document.getElementById("tarikh").value,
 
-    produk: cart.map(item => item.name).join(", "),
-    kuantiti: "'" + cart.map(item => item.quantity).join(", "),
-    pilihan: cart.map(item => item.pilihan).join(", "),
+        refNumber: document.getElementById("paymentRef").value
+    };
 
-    tarikhMajlis: document.getElementById("tarikh").value,
+    fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(() => {
 
-    refNumber: document.getElementById("paymentRef").value
-};
-    
-  fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-})
-.then(() => {
+        alert("Tempahan berjaya dihantar!");
 
-    alert("Tempahan berjaya dihantar!");
+        localStorage.removeItem("cart");
 
-    localStorage.removeItem("cart");
+        window.location.href = "index.html";
 
-    window.location.href = "index.html";
+    })
+    .catch(error => {
 
-})
-.catch(error => {
+        btn.disabled = false;
+        btn.innerHTML = "Hantar Tempahan";
 
-    btn.disabled = false;
-    btn.innerHTML = "Hantar Tempahan";
+        alert("Ralat menghantar tempahan");
+        console.log(error);
 
-    alert("Ralat menghantar tempahan");
-    console.log(error);
-
-});
-
-};
-
+    });
 
 });
+
 </script>
 </body>
 </html>
