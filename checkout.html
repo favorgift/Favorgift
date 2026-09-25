@@ -103,6 +103,9 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
         refNumber: document.getElementById("paymentRef").value
     };
 
+    localStorage.setItem("paymentRef",
+    document.getElementById("paymentRef").value);
+
     fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
         method: "POST",
         mode: "no-cors",
