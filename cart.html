@@ -118,13 +118,16 @@ displayCart();
 
 function saveRefAndContinue(){
 
-    let ref = document.getElementById("paymentRef").value;
+    let ref = document.getElementById("paymentRef").value.trim();
 
-    if(ref.trim() === ""){
-
+    if(ref === ""){
         alert("Sila masukkan No. Rujukan Pembayaran.");
         return;
+    }
 
+    if(ref.length < 8){
+        alert("No. Rujukan Pembayaran mesti sekurang-kurangnya 8 aksara.");
+        return;
     }
 
     localStorage.setItem("paymentRef", ref);
