@@ -76,6 +76,28 @@ nav ul li a:hover{
    flex:1;
 }
 
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:url("images/doorgift.png");
+    background-size:cover;
+    background-position:center;
+
+    filter:blur(8px);
+    transform:scale(1.08);
+
+    opacity:0.35;
+
+    z-index:0;
+}
+.hero-text{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+}
+
 .welcome{
     color:#B88A6A;
     letter-spacing:2px;
