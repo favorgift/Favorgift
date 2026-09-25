@@ -95,9 +95,15 @@ nav ul li a:hover{
 .hero-text{
     position:relative;
     z-index:2;
-    max-width:650px;
-}
 
+    background:rgba(255,255,255,0.45);
+
+    backdrop-filter:blur(8px);
+
+    padding:40px;
+
+    border-radius:25px;
+}
 .welcome{
     color:#B88A6A;
     letter-spacing:2px;
