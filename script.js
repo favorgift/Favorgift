@@ -2,6 +2,11 @@ function addToCart(name, price, image, pilihan){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+    if(!pilihan || pilihan === "Aroma"){
+    alert("Sila pilih aroma terlebih dahulu.");
+    return;
+}
+    
   let existingItem = cart.find(
     item => item.name === name &&
     item.pilihan === pilihan
