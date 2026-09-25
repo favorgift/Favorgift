@@ -80,11 +80,7 @@ Masukkan nombor rujukan pembayaran DuitNow / Online Banking.
 4. Muat naik bukti pembayaran pada borang tempahan untuk tujuan semakan.<br>
 </p>
 
-        <div class="payment-ref-box">
-    <h3>No. Rujukan Pembayaran</h3>
-    <p id="show-ref">Belum diisi</p>
-        </div>
-
+      
 
 
 <br><br>
@@ -111,5 +107,25 @@ Semak Status
 displayCart();
 </script>
 
+<script>
+displayCart();
+
+function saveRefAndContinue(){
+
+    let ref = document.getElementById("paymentRef").value;
+
+    if(ref.trim() === ""){
+
+        alert("Sila masukkan No. Rujukan Pembayaran.");
+        return;
+
+    }
+
+    localStorage.setItem("paymentRef", ref);
+
+    window.location.href = "checkout.html";
+}
+</script>
+    
 </body>
 </html>
