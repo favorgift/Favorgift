@@ -1356,3 +1356,20 @@ nav ul{
     text-align:center;
     color:#5f4630;
 }
+/*cart kotak ref*/
+#paymentRef{
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #d8c3a5;
+    border-radius: 12px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#paymentRef:focus{
+    outline: none;
+    border-color: #b89b72;
+    box-shadow: 0 0 8px rgba(184,155,114,0.3);
+}
