@@ -69,10 +69,18 @@ nav ul li a:hover{
     min-height:85vh;
     display:flex;
     align-items:center;
-    justify-content:space-between;
     padding:60px 8%;
-    background:#FDF7F3;
-    gap:50px;
+
+    background:
+    linear-gradient(
+        rgba(253,247,243,0.85),
+        rgba(253,247,243,0.85)
+    ),
+    url("images/doorgift-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero-text{
@@ -114,18 +122,6 @@ nav ul li a:hover{
 
 .hero-text button:hover{
     transform:translateY(-3px);
-}
-
-.hero-image-box{
-    flex:1;
-    text-align:center;
-}
-
-.hero-image-box img{
-    width:100%;
-    max-width:500px;
-    border-radius:30px;
-    filter:drop-shadow(0 15px 25px rgba(0,0,0,0.15));
 }
 
 /* =========================
