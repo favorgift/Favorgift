@@ -54,17 +54,6 @@ Sila lengkapkan maklumat tempahan anda.
             <option>Korporat</option>
         </select>
 
-   <label>No. Rujukan Pembayaran</label>
-
-<input
-    type="text"
-    id="paymentRef"
-    placeholder="Contoh: DN123456789"
-    required>
-
-<small>
-Masukkan nombor rujukan pembayaran DuitNow / Online Banking.
-</small>
         <label>Catatan Tambahan</label>
         <textarea id="catatan" rows="4"></textarea>
 
@@ -105,7 +94,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
 localStorage.setItem(
     "paymentRef",
-    document.getElementById("paymentRef").value
+   refNumber: localStorage.getItem("paymentRef")
 );
     fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
         method: "POST",
