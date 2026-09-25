@@ -1373,3 +1373,12 @@ nav ul{
     border-color: #b89b72;
     box-shadow: 0 0 8px rgba(184,155,114,0.3);
 }
+/*warna amaran*/
+.payment-note{
+    background: #fff8e7;
+    border-left: 4px solid #b89b72;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.8;
+}
