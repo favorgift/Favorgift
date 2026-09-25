@@ -2,8 +2,10 @@ function addToCart(name, price, image, pilihan){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let existingItem = cart.find(item => item.name === name);
-
+  let existingItem = cart.find(
+    item => item.name === name &&
+    item.pilihan === pilihan
+);
     if(existingItem){
 
         existingItem.quantity += 1;
