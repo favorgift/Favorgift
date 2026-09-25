@@ -90,21 +90,6 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
     
 
-if(!receipt){
-
-    alert("Sila muat naik bukti pembayaran.");
-
-    btn.disabled = false;
-    btn.innerHTML = "Hantar Tempahan";
-
-    return;
-}
-
-let file = document.getElementById("receipt").files[0];
-
-let reader = new FileReader();
-
-reader.onload = function() {
 
 let data = {
     nama: document.getElementById("nama").value,
@@ -117,9 +102,9 @@ let data = {
 
     tarikhMajlis: document.getElementById("tarikh").value,
 
-    receipt: reader.result
+    refNumber: document.getElementById("paymentRef").value
 };
-
+    
   fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
     method: "POST",
     mode: "no-cors",
@@ -149,7 +134,6 @@ let data = {
 
 };
 
-reader.readAsDataURL(file);
 
 });
 </script>
