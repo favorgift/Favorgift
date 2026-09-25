@@ -66,25 +66,14 @@ nav ul li a:hover{
 ========================= */
 
 .hero{
-    min-height:85vh;
-    display:flex;
-    align-items:center;
-    padding:60px 8%;
-
-    background:
-    linear-gradient(
-        rgba(253,247,243,0.85),
-        rgba(253,247,243,0.85)
-    ),
-    url("images/doorgift.png");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-}
-
-.hero-text{
-    flex:1;
+   min-height:85vh; 
+   display:flex; align-items:center; 
+   justify-content:space-between; 
+   padding:60px 8%; 
+   background:#FDF7F3; 
+   gap:50px; } 
+.hero-text{ 
+   flex:1;
 }
 
 .welcome{
