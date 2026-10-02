@@ -2,7 +2,7 @@ function addToCart(name, price, image, pilihan){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    if(!pilihan || pilihan === "Pilih Pilihan"){
+    if(!pilihan || pilihan === "Pilihan"){
         alert("Sila pilih pilihan terlebih dahulu.");
         return;
     }
