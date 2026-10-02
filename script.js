@@ -2,30 +2,31 @@ function addToCart(name, price, image, pilihan){
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    if(!pilihan || pilihan === "Aroma"){
-    alert("Sila pilih aroma terlebih dahulu.");
-    return;
-}
-    
-  let existingItem = cart.find(
-    item => item.name === name &&
-    item.pilihan === pilihan
-);
+    if(!pilihan || pilihan === "Pilih Pilihan"){
+        alert("Sila pilih pilihan terlebih dahulu.");
+        return;
+    }
+
+    let existingItem = cart.find(
+        item => item.name === name &&
+                item.pilihan === pilihan
+    );
+
     if(existingItem){
 
         existingItem.quantity += 1;
 
     } else {
 
-  cart.push({
-        name:name,
-        price:price,
-        image:image,
-        pilihan:pilihan,
-        quantity:1
-    });
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            pilihan: pilihan,
+            quantity: 1
+        });
+
     }
-      
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
