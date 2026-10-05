@@ -91,7 +91,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     nama: document.getElementById("nama").value,
     telefon: document.getElementById("telefon").value,
     email: document.getElementById("email").value,
-     alamat: document.getElementById("alamat").value,
+    alamat: document.getElementById("alamat").value,
 
     produk: cart.map(item => item.name).join(", "),
     kuantiti: "'" + cart.map(item => item.quantity).join(", "),
@@ -101,6 +101,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
     refNumber: localStorage.getItem("paymentRef")
 };
+    
     fetch("https://script.google.com/macros/s/AKfycbxj2pAUWqCE3w8eoDafr4muSPurUsiKzFAnVewUfqzmxUKCw9gkL-zaGIp2JoZh8ESmBg/exec", {
         method: "POST",
         mode: "no-cors",
