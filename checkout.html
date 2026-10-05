@@ -86,6 +86,16 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     btn.innerHTML = "Menghantar Tempahan...";
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let alamat = document.getElementById("alamat").value.trim();
+
+if(alamat === ""){
+    alert("Sila isi Alamat Penghantaran.");
+    
+    btn.disabled = false;
+    btn.innerHTML = "Hantar Tempahan";
+    
+    return;
+}
 
  let data = {
     nama: document.getElementById("nama").value,
